@@ -1,5 +1,6 @@
 jwt = require('jsonwebtoken');
 const validateJWT = (req, res, next) => {
+    console.log("IP", req.connection.remoteAddress)
     const token = req.header('x-token');
     if (!token) {
         res.status(401).json({
