@@ -16,7 +16,7 @@ router.post('/new', [
 ], createUser);
 
 
-router.post('/',
+router.post('/login',
     [
         check('email', 'email parameter is required').not().isEmpty(),
         check('email', 'email is not valid').isEmail(),

@@ -15,7 +15,7 @@ app.use(
 
 
 //routes
-app.use('/api/login', require('./routes/auth'));
+app.use('/api/auth', require('./routes/auth'));
 
 // Node Server
 const server = require('http').createServer(app);
