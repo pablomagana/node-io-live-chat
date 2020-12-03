@@ -45,6 +45,7 @@ const login = async (req, res) => {
             if (bcrypt.compareSync(password, user.password)) {
                 return res.status(200).json({
                     ok: true,
+                    user,
                     token
                 });
             }
