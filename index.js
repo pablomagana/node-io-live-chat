@@ -9,6 +9,7 @@ const app = express();
 
 //lectura de body http
 app.use(
+    '/',
     express.json()
 );
 
