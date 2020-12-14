@@ -9,8 +9,9 @@ const validateJWT = (req, res, next) => {
         })
     }
     try {
-        const uid = jwt.verify(token, process.env.JWT_KEY);
-        req.uid = uid;
+        const user = jwt.verify(token, process.env.JWT_KEY);
+        console.log("autenticado con ", user.uid);
+        req.uid = user.uid;
         next();
     } catch (error) {
         res.status(500).json({

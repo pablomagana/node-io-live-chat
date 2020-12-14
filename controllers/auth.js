@@ -64,7 +64,7 @@ const login = async (req, res) => {
 
 const refreshToken = async (req, res) => {
 
-    const uid = req.uid.uid;
+    const uid = req.uid;
     console.log(uid);
     try {
         const user = await User.findById(uid);

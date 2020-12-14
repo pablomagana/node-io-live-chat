@@ -8,7 +8,6 @@ const UserSchema = Schema({
     },
     email: {
         type: String,
-
         require: true,
         unique: true
     },
@@ -23,7 +22,7 @@ const UserSchema = Schema({
 });
 
 UserSchema.method('toJSON', function () {
-    const { __v, _id, password, online, ...object } = this.toObject();
+    const { __v, _id, password, ...object } = this.toObject();
     object.uid = _id;
     return object;
 });

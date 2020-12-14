@@ -13,9 +13,8 @@ app.use(
     express.json()
 );
 
-
 //routes
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api', require('./routes/routes'));
 
 // Node Server
 const server = require('http').createServer(app);
